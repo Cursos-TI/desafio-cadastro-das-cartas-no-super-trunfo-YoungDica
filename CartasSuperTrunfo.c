@@ -19,7 +19,7 @@ int main(){
 
    //entrada de dados: codigo da carta.
    printf("Codigo da Carta: ");
-    scanf(" %s", &codigo1);
+   scanf(" %s", &codigo1);
 
    //entrada de dados: Nome da Cidade (Cidades com nomes compostos da erro no programa ex: São Paulo.).
    printf("Nome da Cidade: ");
