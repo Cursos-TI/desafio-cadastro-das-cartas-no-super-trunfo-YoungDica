@@ -1,17 +1,21 @@
 #include <stdio.h>
 int main(){
    char estado1, cidade1[20], codigo1[10];
-   int ponto1, populacao1, carta1;
-   float area1, pib1;
+   int ponto1, carta1;
+   float area1, pib1, densidade1, capita1, super1;
+   unsigned long int populacao1;
 
    char estado2, cidade2[20], codigo2[10];
-   int ponto2, populacao2, carta2;
-   float area2, pib2;
+   int ponto2, carta2;
+   float area2, pib2, densidade2, capita2, super2;
+   unsigned long int populacao2;
+
+
 
 
    //CARTA 01
 
-   printf("Cadastre as Informações\n");
+   printf("Cadastre as Informacoes\n");
 
    //entrada de dados: estado.
    printf("Estado: ");
@@ -19,7 +23,7 @@ int main(){
 
    //entrada de dados: codigo da carta.
    printf("Codigo da Carta: ");
-   scanf(" %s", &codigo1);
+    scanf(" %s", &codigo1);
 
    //entrada de dados: Nome da Cidade (Cidades com nomes compostos da erro no programa ex: São Paulo.).
    printf("Nome da Cidade: ");
@@ -41,9 +45,23 @@ int main(){
    printf("Numero de Pontos Turisticos: ");
     scanf(" %d", &ponto1);
 
+    printf("Primeiro cadastro Finalizado\n");
+
+    // calculos de densidade Populacionais.
+
+    densidade1 = populacao1 / area1;
+
+    1 / densidade1;
+
+    // Calculos de PIB per Capita.
+
+    capita1 = pib1 / populacao1;
+
+    super1 = pib1 + area1 + populacao1 + densidade1 + capita1;
+
 
     //****CARTA 02*****
-    printf("INFORME OS DADOS DA CIDADE\n");
+    printf("Cadastre as Informacoes\n");
 
 
    //entrada de dados: estado.
@@ -74,6 +92,16 @@ int main(){
    printf("Numero de Pontos Turisticos: ");
     scanf(" %d", &ponto2);
 
+    densidade2 = (populacao2 / area2);
+
+    1 / densidade2;
+
+    capita2 =(pib2 / populacao2);
+
+    super2 = pib2 + area2 + populacao2 + densidade2 + capita2;
+
+    
+
         //Impressão dos cados de ambas as cartas na tela.
         printf("**Carta SUPERTRUNFO 01** \n");
 
@@ -86,6 +114,10 @@ int main(){
             printf("Area da Cidade: %f \n", area1);
             printf("PIB da Cidade: %f \n", pib1);
             printf("Pontos Turisticos: %d\n", ponto1);
+            printf("Densidade Populacional: %.2f\n", densidade1);
+            printf("PIB per capita: %.2f\n", capita1);
+            printf("Super Poder: %.2f\n", super1);
+
 
                 //Carta 02
         printf("**Carta SUPERTRUNFO 02** \n");
@@ -97,6 +129,22 @@ int main(){
             printf("Area da Cidade: %f \n", area2);
             printf("PIB da Cidade: %f \n", pib2);
             printf("Pontos Turisticos: %d\n", ponto2);
+            printf("Densidade Populacional: %.2f\n", densidade2);
+            printf("PIB per capita: %.2f\n", capita2);
+            printf("Super Poder: %.2f\n", super2);
+
+            //Impressão de comparações de dados informados nos cadastros das cartas.
+
+            printf ("CARTA01 = 1 e CARTA02 = 0 \n");
+
+            printf ("Populacao: %d\n", populacao1 > populacao2);
+            printf ("Area da Cidade: %f\n", area1 > area2);
+            printf ("PIB da Cidade: %f\n", pib1 > pib2);
+            printf ("Pontos Turisticos: %d\n", ponto1 > ponto2);
+            printf ("Densidade Populacional: %d\n", densidade1 > densidade2);
+            // PIB per capita, o numero menor do resultado deve ser apontado no Resultado
+            printf ("PIB per capita: %f\n", capita1 < capita2);
+            printf ("Maior Super Poder: %f\n", super1 > super2);
 
         return 0;
 
