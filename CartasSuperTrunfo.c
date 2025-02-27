@@ -138,13 +138,13 @@ int main(){
             printf ("CARTA01 = 1 e CARTA02 = 0 \n");
 
             printf ("Populacao: %d\n", populacao1 > populacao2);
-            printf ("Area da Cidade: %f\n", area1 > area2);
-            printf ("PIB da Cidade: %f\n", pib1 > pib2);
+            printf ("Area da Cidade: %d\n", area1 > area2);
+            printf ("PIB da Cidade: %d\n", pib1 > pib2);
             printf ("Pontos Turisticos: %d\n", ponto1 > ponto2);
             printf ("Densidade Populacional: %d\n", densidade1 > densidade2);
             // PIB per capita, o numero menor do resultado deve ser apontado no Resultado
-            printf ("PIB per capita: %f\n", capita1 < capita2);
-            printf ("Maior Super Poder: %f\n", super1 > super2);
+            printf ("PIB per capita: %d\n", capita1 < capita2);
+            printf ("Maior Super Poder: %d\n", super1 > super2);
 
         return 0;
 
