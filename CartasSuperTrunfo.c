@@ -47,7 +47,7 @@ int main(){
 
     printf("Primeiro cadastro Finalizado\n");
 
-    // calculos de densidade Populacionais.
+    // calculos de densidade Populacional.
 
     densidade1 = populacao1 / area1;
 
@@ -92,11 +92,14 @@ int main(){
    printf("Numero de Pontos Turisticos: ");
     scanf(" %d", &ponto2);
 
-    densidade2 = (populacao2 / area2);
+    //Divisão para determinar o valor 
+    densidade2 = populacao2 / area2;
 
     1 / densidade2;
 
-    capita2 =(pib2 / populacao2);
+    // Calculos de PIB per Capita.
+
+    capita2 = pib2 / populacao2;
 
     super2 = pib2 + area2 + populacao2 + densidade2 + capita2;
 
@@ -115,7 +118,7 @@ int main(){
             printf("PIB da Cidade: %f \n", pib1);
             printf("Pontos Turisticos: %d\n", ponto1);
             printf("Densidade Populacional: %.2f\n", densidade1);
-            printf("PIB per capita: %.2f\n", capita1);
+            printf("PIB per capita: %f\n", capita1);
             printf("Super Poder: %.2f\n", super1);
 
 
@@ -130,22 +133,70 @@ int main(){
             printf("PIB da Cidade: %f \n", pib2);
             printf("Pontos Turisticos: %d\n", ponto2);
             printf("Densidade Populacional: %.2f\n", densidade2);
-            printf("PIB per capita: %.2f\n", capita2);
+            printf("PIB per capita: %f\n", capita2);
             printf("Super Poder: %.2f\n", super2);
 
             //Impressão de comparações de dados informados nos cadastros das cartas.
 
             printf ("CARTA01 = 1 e CARTA02 = 0 \n");
 
-            printf ("Populacao: %d\n", populacao1 > populacao2);
+            printf ("Populacao: %u\n", populacao1 > populacao2);
             printf ("Area da Cidade: %d\n", area1 > area2);
             printf ("PIB da Cidade: %d\n", pib1 > pib2);
             printf ("Pontos Turisticos: %d\n", ponto1 > ponto2);
             printf ("Densidade Populacional: %d\n", densidade1 > densidade2);
+
             // PIB per capita, o numero menor do resultado deve ser apontado no Resultado
             printf ("PIB per capita: %d\n", capita1 < capita2);
             printf ("Maior Super Poder: %d\n", super1 > super2);
 
-        return 0;
+            //A seguir temos as condições if e else, para determinar os vencedores.
+
+            if (populacao1 > populacao2) {
+                printf("Carta Numero 1 e Vencedora\n");
+            }
+        
+            else {
+                printf("Carta numero 2 e Vencedora\n");
+
+            }
+
+            if (area1 > area2) {
+                printf("Carta Numero 1 e Vencedora\n");
+                }
+            
+            else {
+                printf("Carta numero 2 e Vencedora\n");
+
+            }
+
+            if (pib1 > pib2) {
+                printf("Carta Numero 1 e Vencedora\n");
+            }
+        
+            else {
+                printf("Carta numero 2 e Vencedora\n");
+
+            }
+
+            if (densidade1 < densidade2) {
+                printf("Carta Numero 1 e Vencedora\n");
+            }
+    
+            else {
+                printf("Carta numero 2 e Vencedora\n");
+
+            }
+
+            if (capita1 > capita2) {
+                printf("Carta Numero 1 e Vencedora\n");
+            }
+
+            else {
+                printf("Carta numero 2 e Vencedora\n");
+
+            }
+
+            return 0;
 
 }
