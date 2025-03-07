@@ -184,7 +184,8 @@ int main(){
             }
             printf("Densidade Populacional Carta01: %.2f\n", densidade1);
             printf("Densidade Populacional Carta02: %.2f\n", densidade2);
-
+            
+            // A Variavel com o menor numero vence esta categoria. 
             if (densidade1 < densidade2) {
                 printf("Carta Numero 1 e Vencedora\n");
             }
